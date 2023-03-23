@@ -9,7 +9,7 @@
 // -------------- Create To do list array-------------
 
 const toDoList = ["Pinneaple"]
-
+// test nico
 // test git
 
 // ---------------Function create task list-------------
@@ -21,7 +21,7 @@ const nameOfItem = document.querySelector("#nameOfItem")
 valid.addEventListener("click", function (event) {
   event.preventDefault()
   toDoList.push(nameOfItem.value)
-  
+
   const divTask = document.createElement("div")
   const newInput = document.createElement("input")
   const deleteButton = document.createElement("button")
@@ -31,16 +31,16 @@ valid.addEventListener("click", function (event) {
   note.appendChild(divTask)
   divTask.appendChild(newInput)
   divTask.appendChild(deleteButton)
-  
+
   divTask.classList.add(".divTask")
   deleteButton.classList.add(".deleteButton")
   newInput.classList.add(".newInput")
 
-  deleteButton.addEventListener("click", function(event){
+  deleteButton.addEventListener("click", function (event) {
     console.log(event.target)
     const index = toDoList.indexOf(event.target)
     console.log(index)
-    toDoList.splice(index,1)
+    toDoList.splice(index, 1)
     console.log(toDoList)
     divTask.remove()
   })
@@ -54,14 +54,14 @@ valid.addEventListener("click", function (event) {
 
 const buttonS = document.querySelector('.deleteButton')
 console.log(buttonS)
-buttonS.addEventListener('click', function(event){
+buttonS.addEventListener('click', function (event) {
   event.preventDefault()
   deleteButton.addEventListener("click")
 
-  const index = toDoList.findIndex(toDoList=>toDoList === "raisin")
+  const index = toDoList.findIndex(toDoList => toDoList === "raisin")
   console.log(index)
   console.log(toDoList[index])
- 
+
 })
 
 
