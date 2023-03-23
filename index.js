@@ -9,7 +9,7 @@
 // -------------- Create To do list array-------------
 
 const toDoList = ["Pinneaple"]
-// test git nico
+// test git n
 // test git
 
 // ---------------Function create task list-------------
