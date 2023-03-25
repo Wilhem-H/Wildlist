@@ -64,22 +64,27 @@ ul {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  list-style-type: none;
 }
 .btn-small {
   display: inline-block;
 }
 
 .divTask {
+  width: 150px;
   display: flex;
-  justify-content: space-between;
-  width: auto;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 .deleteButton {
   width: 50%;
+  margin: 5px;
 }
 
-.newInput {
-  width: 50%;
+.newLi {
+  list-style-type: none;
+  width: 120px;
 }
 
 /*footer*/
