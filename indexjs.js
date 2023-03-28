@@ -17,10 +17,12 @@ const toDoDiv = document.querySelector("#listItems")
 // ----------- Add task to array ----------------
 
 function addTask() {
+
     //toDoList.push({
     //  content: task.value,
     // done: false,
     //}
+
 
     task.value = ""
     console.log(toDoList)
@@ -32,31 +34,42 @@ function removeTask(task) {
     toDoList.splice(task, 1)
     // createTask()
     console.log(toDoList)
+
     loadToDoList()
+
 }
 
 // ----------- Create task -----------------
 
 function createTask(task, index) {
 
-    const newDiv = document.createElement("div")
-    const newTask = document.createElement("li")
+    // JE CREE LE BOUTON, JE LAJOUTE 
     const deleteButton = document.createElement("button")
 
-    toDoDiv.appendChild(newDiv)
-    newDiv.appendChild(newTask)
-    newDiv.appendChild(deleteButton)
-
-    newDiv.classList.add(".divTask")
-    deleteButton.classList.add(".deleteButton")
-    newTask.classList.add(".newLi")
-
-
-    newTask.innerHTML = task.content
-    newDiv.id = index
+    deleteButton.classList.add("deleteButton")
     deleteButton.innerHTML = "X"
 
+    deleteButton.addEventListener("click", function (event) {
+        event.preventDefault()
+        removeTask(index)
+        loadToDoList()
+    })
 
+    // JE CREE UNE TACHE, JE LAJOUTE
+
+    const newTask = document.createElement("li")
+
+    newTask.innerHTML = task
+    newTask.id = index
+    newTask.classList.add("task")
+
+    if (index % 2 === 0) {
+        newTask.classList.add("lightGrey")
+    } else { newTask.classList.add("grey") }
+
+    newTask.appendChild(deleteButton)
+    toDoDiv.appendChild(newTask)
+    
     newTask.addEventListener("click", () => {
         console.log("je passe à true ici")
         let newObject = { ...toDoList[index], done: !toDoList[index].done };
@@ -76,19 +89,23 @@ function createTask(task, index) {
             newTask.style.color = "black";
             newTask.style.textDecorationLine = "none";
         }
-
     })
 
-    deleteButton.addEventListener("click", function (event) {
+    
+     deleteButton.addEventListener("click", function (event) {
         event.preventDefault()
         removeTask(index)
         loadToDoList()
     })
 
 
+
+
     // localStorage.setItem("toDoList", JSON.stringify(toDoList));
 
-    return newDiv
+
+    return newTask
+
 }
 
 // ----------- Upload array ----------------
@@ -105,6 +122,7 @@ function loadToDoList() {
 submit.addEventListener("submit", function (event) {
     event.preventDefault()
     if (task.value) {
+
         toDoList.push({
             content: task.value,
             done: false
@@ -112,6 +130,7 @@ submit.addEventListener("submit", function (event) {
         })
         task.value = ""
         // addTask(task.value)
+
 
         loadToDoList()
     }
