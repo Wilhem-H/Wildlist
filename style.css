@@ -46,7 +46,9 @@ header {
   gap: 2em;
 }
 
-.title {
+
+h1 {
+
   color: white;
   font-weight: bold;
   /*align-items: right;*/
@@ -147,6 +149,7 @@ footer {
   align-items: center;
 }
 
+
 @media screen and (min-width: 600px) {
   header {
     display: grid;
@@ -170,4 +173,5 @@ footer {
   .note {
     width: 40vw;
   }
+
 }
