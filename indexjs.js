@@ -14,20 +14,6 @@ const submit = document.querySelector("#form")
 const task = document.querySelector("#nameOfItem")
 const toDoDiv = document.querySelector("#listItems")
 
-// ----------- Add task to array ----------------
-
-function addTask() {
-
-    //toDoList.push({
-    //  content: task.value,
-    // done: false,
-    //}
-
-
-    task.value = ""
-    console.log(toDoList)
-}
-
 // ---------- Remove task to array ---------------
 
 function removeTask(task) {
@@ -59,10 +45,11 @@ function createTask(task, index) {
 
     const newTask = document.createElement("li")
 
-    newTask.innerHTML = task
+    newTask.innerHTML = task.content
     newTask.id = index
     newTask.classList.add("task")
-
+    
+    // -------- Style css todolist --------
     if (index % 2 === 0) {
         newTask.classList.add("lightGrey")
     } else { newTask.classList.add("grey") }
@@ -92,11 +79,11 @@ function createTask(task, index) {
     })
 
     
-     deleteButton.addEventListener("click", function (event) {
-        event.preventDefault()
-        removeTask(index)
-        loadToDoList()
-    })
+    //  deleteButton.addEventListener("click", function (event) {
+    //     event.preventDefault()
+    //     removeTask(index)
+    //     loadToDoList()
+    // })
 
 
 

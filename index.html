@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title class="title">Wild List</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title class="title">Wild List</title>
-</head>
-
-<body>
-  <div id="main">
-    <header>
-      <img src="assets/logo.png" class="logo" alt="logo site" />
-      <h1 class="title">WildList</h1>
-    </header>
-    <section class="sectionNote">
-      <div class="note">
-        <div class="titleStyle">
-          <input class="toDoTitle" type="text" id="nameOfList" name="titre" placeholder="Name of list" />
+  <body>
+    <div id="main">
+      <header>
+        <img src="assets/logo.png" class="logo" alt="logo site" />
+        <h1 class="title">WildList</h1>
+      </header>
+      <section class="sectionNote">
+        <div class="note">
+          <div class="titleStyle">
+            <input
+              class="toDoTitle"
+              type="text"
+              id="nameOfList"
+              name="titre"
+              placeholder="Name of list"
+            />
+          </div>
+          <hr class="separator" />
+          <form id="form">
+            <input
+              type="text"
+              name="liste"
+              class="liste"
+              id="nameOfItem"
+              placeholder="Add item"
+              value=""
+            />
+            <input type="submit" value=" + " id="valid" />
+          </form>
+          <div id="toDoList">
+            <ul id="listItems"></ul>
+          </div>
         </div>
-        <hr class="separator">
-        <form id="form">
-
-          <input
-            type="text"
-            name="liste"
-            class="liste"
-            id="nameOfItem"
-            placeholder="Add item"
-            value=""
-          />
-
-
-          <input type="submit" value=" + " id="valid" />
-        </form>
-        <div id="toDoList">
-          <ul id="listItems"></ul>
-        </div>
-      </div>
-    </section>
-    <footer>2023 copyright</footer>
-    <script src="indexjs.js"></script>
+      </section>
+      <footer>2023 copyright</footer>
+      <script src="indexjs.js"></script>
+    </div>
   </body>
 </html>
-

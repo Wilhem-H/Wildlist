@@ -35,7 +35,6 @@ body {
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  flex-wrap: wrap;
 }
 
 header {
@@ -46,9 +45,7 @@ header {
   gap: 2em;
 }
 
-
-h1 {
-
+.title {
   color: white;
   font-weight: bold;
   /*align-items: right;*/
@@ -68,7 +65,6 @@ h1 {
   align-items: center;
   flex: auto;
 }
-
 
 .note {
   background-color: var(--grey);
@@ -149,7 +145,6 @@ footer {
   align-items: center;
 }
 
-
 @media screen and (min-width: 600px) {
   header {
     display: grid;
@@ -157,7 +152,7 @@ footer {
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    grid-template-areas: "d"
+    grid-template-areas: "d";
   }
 
   .title {
@@ -173,5 +168,4 @@ footer {
   .note {
     width: 40vw;
   }
-
 }
