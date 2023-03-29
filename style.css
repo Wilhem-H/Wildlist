@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  min-height:100%;
+  min-height: 100%;
   /*position:relative;*/
   margin-bottom: 6%;
 }
@@ -104,7 +104,6 @@ header {
   display: flex;
   justify-content: center;
   height: 5vh;
-
 }
 
 ul {
@@ -114,6 +113,19 @@ ul {
 .deleteButton {
   height: 18px;
   width: 18px;
+}
+ 
+.formDelete{
+  display: flex;
+  justify-content: center;
+}
+
+#deleteall{
+  background-color: #c9c6c6;
+  width: 20vh;
+  font-family:'Quicksand', sans-serif;
+  font-weight: 400;
+  border: 1px solid var(--chekedGrey);
 }
 
 .task {
@@ -147,9 +159,7 @@ footer {
   width: 100%;
   min-height: 5vh;
   /*position:absolute;*/
-  bottom:0;
-  
- 
+  bottom: 0;
 }
 
 #alignTitle {
