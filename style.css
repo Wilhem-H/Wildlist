@@ -20,7 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family:'Quicksand', sans-serif;
 }
 
 body {
@@ -30,25 +30,26 @@ body {
 
 #main {
   background-color: #5a5a5a;
-  height: 100vh;
+  /*height: 100vh;*/
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  flex-wrap: wrap;
+  min-height:100%;
+  /*position:relative;*/
+  margin-bottom: 6%;
 }
 
 header {
-  height: 120px;
+  min-height: 13vh;
   background-color: var(--chekedGrey);
   display: flex;
   align-items: center;
   gap: 2em;
+  margin-bottom: 7%;
 }
 
-
-h1 {
-
+.title {
   color: white;
   font-weight: bold;
   /*align-items: right;*/
@@ -69,7 +70,6 @@ h1 {
   flex: auto;
 }
 
-
 .note {
   background-color: var(--grey);
   border-color: var(--chekedGrey);
@@ -88,19 +88,23 @@ h1 {
   margin: 8px 0px 8px 0px;
 }
 
+.toDoTitle {
+  text-align: center;
+  width: 60vw;
+  font-size: x-large;
+}
+
 .toDoTitle,
 .liste {
   border: 0;
   background-color: #d1d1d1;
 }
 
-.toDoTitle {
-  text-align: center;
-}
-
 .titleStyle {
   display: flex;
   justify-content: center;
+  height: 5vh;
+
 }
 
 ul {
@@ -137,10 +141,15 @@ ul {
 
 /*footer*/
 footer {
+  margin-top: 3%;
   padding: 1rem;
   background-color: var(--chekedGrey);
   width: 100%;
-  height: 50px;
+  min-height: 5vh;
+  /*position:absolute;*/
+  bottom:0;
+  
+ 
 }
 
 #alignTitle {
@@ -149,7 +158,6 @@ footer {
   align-items: center;
 }
 
-
 @media screen and (min-width: 600px) {
   header {
     display: grid;
@@ -157,12 +165,14 @@ footer {
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    grid-template-areas: "d"
+    grid-template-areas: "d";
+    margin-bottom: 3%;
   }
 
   .title {
     grid-area: d;
     justify-self: center;
+    font-size: 40px;
   }
 
   .logo {
@@ -173,5 +183,5 @@ footer {
   .note {
     width: 40vw;
   }
-
+  
 }
