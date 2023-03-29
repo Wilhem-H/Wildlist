@@ -19,13 +19,14 @@ const toDoDiv = document.querySelector("#listItems")
 
 function removeTask(task) {
     toDoList.splice(task, 1)
-    console.log(toDoList)
-    loadToDoList()
+    console.log("removeTask toDoList:", toDoList)
 }
 
 // ----------- Create task -----------------
 
 function createTask(task, index) {
+
+    
 
     // --- Create Delete Button ----
     const deleteButton = document.createElement("button")
@@ -33,6 +34,7 @@ function createTask(task, index) {
     deleteButton.innerHTML = "X"
     deleteButton.addEventListener("click", function (event) {
         event.preventDefault()
+        event.stopImmediatePropagation()
         removeTask(index)
         localStorage.clear()
         loadToDoList()
@@ -59,17 +61,17 @@ function createTask(task, index) {
         toDoList.splice(index, 1, newObject);
         console.log(toDoList)
         console.log("task.done: ", task.done)
-        if (newObject.done) {
-            console.log("je barre ici")
-            newTask.style.textDecorationLine = "line-through";
-            newTask.style.color = "red";
-        } else {
-            console.log("je supprime le trait")
-            newTask.style.color = "black";
-            newTask.style.textDecorationLine = "none";
-        }
+        loadToDoList()
     })
     localStorage.setItem("toDoList", JSON.stringify(toDoList));
+
+    if (task.done) {
+        newTask.style.textDecorationLine = "line-through";
+        newTask.style.color = "red";
+    } else {
+        newTask.style.color = "black";
+        newTask.style.textDecorationLine = "none";
+    }     
     return newTask
 }
 
@@ -80,9 +82,10 @@ function loadToDoList() {
     for (let i = 0; i < toDoList.length; i++) {
         document.querySelector("#listItems").appendChild(createTask(toDoList[i], i));
     }
+    
 }
 
-// ------------ Listener ---------------
+// ------------ listener  ---------------
 
 submit.addEventListener("submit", function (event) {
     event.preventDefault()
