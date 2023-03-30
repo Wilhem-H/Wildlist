@@ -31,7 +31,7 @@ function createTask(task, index) {
     // --- Create Delete Button ----
     const deleteButton = document.createElement("button")
     deleteButton.classList.add("deleteButton")
-    deleteButton.innerHTML = "X"
+    deleteButton.innerHTML = " X "
     deleteButton.addEventListener("click", function (event) {
         event.preventDefault()
         event.stopImmediatePropagation()
