@@ -16,11 +16,16 @@
   background-color: var(--chekedGrey);
 }
 
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
+}
+input{
+  border-radius: none;
+  background-color: none;
+  color:none;
 }
 
 body {
@@ -149,6 +154,10 @@ ul {
 .newLi {
   list-style-type: none;
   width: 120px;
+}
+.deleteButton{
+  height: 3vh;
+  text-align: center;
 }
 
 /*footer*/
