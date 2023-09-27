@@ -1,5 +1,5 @@
 :root {
-  --grey: #c9c6c6;
+  --grey: #cfcdcd;
   --lightGrey: #cecdcd;
   --chekedGrey: #888;
 }
@@ -16,16 +16,16 @@
   background-color: var(--chekedGrey);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
-input{
+input {
   border-radius: none;
   background-color: none;
-  color:none;
+  color: none;
 }
 
 body {
@@ -119,16 +119,16 @@ ul {
   height: 18px;
   width: 18px;
 }
- 
-.formDelete{
+
+.formDelete {
   display: flex;
   justify-content: center;
 }
 
-#deleteall{
+#deleteall {
   background-color: #c9c6c6;
   width: 20vh;
-  font-family:'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
   border: 1px solid var(--chekedGrey);
 }
@@ -155,7 +155,7 @@ ul {
   list-style-type: none;
   width: 120px;
 }
-.deleteButton{
+.deleteButton {
   height: 3vh;
   text-align: center;
 }
